@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    core_utilities (0.0.1)
-      rails (~> 3.1.1)
+    core_utilities (0.1.0)
+      activesupport (~> 3.1.1)
 
 GEM
   remote: http://rubygems.org/
@@ -96,4 +96,5 @@ PLATFORMS
 DEPENDENCIES
   core_utilities!
   jquery-rails
+  rails (~> 3.1.1)
   sqlite3

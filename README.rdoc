@@ -1,3 +1,19 @@
 = CoreUtilities
 
 This project rocks and uses MIT-LICENSE.
+
+== Additional information
+
+=== Contributors
+
+We have a short list of valued contributors. Check them all at:
+
+http://github.com/caleon/core_utilities/contributors
+
+=== Maintainers
+
+* caleon (http://github.com/caleon)
+
+== License
+
+MIT License. Copyright 2011 caleon.
