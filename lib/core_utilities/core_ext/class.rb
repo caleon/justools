@@ -1,4 +1,4 @@
-require 'active_support/module/aliasing'
+require 'active_support/core_ext/module/aliasing'
 
 class Class
   # Purpose is to be able to define a default value for a class_attribute when one isn't initially set.
