@@ -1,3 +1,5 @@
+require 'significance'
+
 class Array
   def arguments_and_options(update_hash={})
     merge_options(update_hash).args_and_opts!
@@ -23,7 +25,7 @@ class Array
   
   private 
   def method_missing(method_sym, *arguments, &block)
-    return super unless Object.const_defined?(:REGEX) and method_sym =~ /^#{%w(arg(?:ument)?s opt(?:ion)?s).zip(Array.new(2, ::REGEX[:with_method_name].source)).map(&:join).join('_and_')}!$/
+    return super unless method_sym =~ /^#{%w(arg(?:ument)?s opt(?:ion)?s).zip(Array.new(2, '(?:_with_([a-z0-9]+(?:[a-z0-9]|_(?![_=\b]))*?))?')).map(&:join).join('_and_')}!$/
     args_and_opts.tap do |argopts|
       [ $1, $2 ].each_with_index do |meth, i|
         next unless meth.significant?

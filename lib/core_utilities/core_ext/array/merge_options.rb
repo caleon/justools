@@ -1,3 +1,4 @@
+require 'core_utilities/core_ext/array/extract_options'
 class Array
   def merge_options(update_hash={})
     endex, base_hash = options_extractable? ? [ -2, last ] : [ -1, {} ]

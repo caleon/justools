@@ -16,11 +16,11 @@ Ruby-level extensions, utilities, convenience methods that I've found I'm consta
 
 ==== Object#is_included_in?
 
-		User.find(1).class.is_included_in?(User, Article, Authentication)
+    User.find(1).class.is_included_in?(User, Article, Authentication)
 		
 or alternatively:
 
-		@user.is_one_kind_of?(User, Article, Authentication)
+    @user.is_one_kind_of?(User, Article, Authentication)
 		
 which has the same effect as:
 
@@ -91,7 +91,7 @@ The above Array methods lead to this handy method whose utility, in essence, is 
 which, with the help of #args_and_opts (and the help of of #method_missing for extending its functionality) you can write:
 
   def find(*arguments)
-    an_id, opts = arguments.args_with_shift_and_opts_with_merge!(:uer_id => self.article.user_id, :found_at => Time.now)
+    an_id, opts = arguments.args_with_shift_and_opts_with_merge!(:user_id => self.article.user_id, :found_at => Time.now)
   end
 
 Basically the format of the method call is arg(ument)?s(_with_[ARGMETHOD])?_and_opt(ion)?s(_with_[OPTSMETHOD])?!, where the ARGMETHOD is the name of the method which applies to the "args" part of the array, and OPTSMETHOD would be the name of the method which is called on the "opts" part of the array.

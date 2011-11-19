@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "rails", "~> 3.1.1"
   s.add_dependency 'activesupport', '~> 3.1.1'
+  s.add_dependency 'significance'
 
   s.add_development_dependency "sqlite3"
 end

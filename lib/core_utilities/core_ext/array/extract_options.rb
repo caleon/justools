@@ -1,3 +1,10 @@
+class Hash
+  # Duplicated from ActiveSupport
+  def extractable_options?
+    instance_of?(Hash)
+  end
+end
+
 class Array
   def extract_options
     options_extractable? ? last : {}
