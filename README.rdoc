@@ -122,9 +122,9 @@ Has #append_value which is similar to merging hashes, but in cases where you don
 
 === Contributors
 
-We have a short list of valued contributors. Check them all at:
+Please feel free to contact me about collaborating on this project.
 
-http://github.com/caleon/core_utilities/contributors
+http://github.com/caleon/justools/contributors
 
 === Maintainers
 
@@ -132,4 +132,4 @@ http://github.com/caleon/core_utilities/contributors
 
 == License
 
-MIT License. Copyright 2011 caleon.
+MIT License. Copyright 2012 caleon.
