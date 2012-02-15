@@ -5,7 +5,7 @@ require "justools/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "Justools"
+  s.name        = "justools"
   s.version     = Justools::VERSION
   s.authors     = ["caleon"]
   s.email       = ["caleon@gmail.com"]
