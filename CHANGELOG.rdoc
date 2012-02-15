@@ -1,3 +1,27 @@
+== 1.1.6
+
+* Renaming from CoreUtilities ('core\_utilities' gem) to Justools.
+
+* Removing unnecessary dependencies on ActiveSupport, Rails, Significance, Schrodinger's Cat.
+
+* Not doubly defining methods in extensions if they are already defined.
+
+* Stunting/disabling 'args and opts' with method missing assistance for Ruby < 1.9.
+
+* Syntax changes to conform to best practices and style guides.
+
+* Deactivating class attribute with default extension.
+
+* Merging extract options with merge options file.
+
+* Renaming (or aliasing) methods to better fit with RSpec should syntaxes.
+
+* Slowly deprecating old names by setting up transition via alias method.
+
+* Adding comment-based documentation with examples and parameters.
+
+* Updating main README file.
+
 == 0.1.0
 
 * Serious effort at making a legit gem.

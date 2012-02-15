@@ -1,0 +1,5 @@
+require 'justools/core_ext/array/filters'
+require 'justools/core_ext/array/flatten_splat'
+require 'justools/core_ext/array/inquiry'
+require 'justools/core_ext/array/merge_options'
+require 'justools/core_ext/array/args_and_opts'

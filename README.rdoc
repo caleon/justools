@@ -1,10 +1,10 @@
-= CoreUtilities
+= Justools (formerly CoreUtilities)
 
 Ruby-level extensions, utilities, convenience methods that I've found I'm constantly using in all my projects.
 
 == Usage:
 
-    gem 'core_utilities', :git => "git://github.com/caleon/core_utilities.git"
+    gem 'justools', :git => "git://github.com/caleon/justools.git"
 
 == Selected Examples:
 
@@ -12,9 +12,9 @@ Ruby-level extensions, utilities, convenience methods that I've found I'm consta
 
 ==== Object#as
 
-    [ :donkey, { :class => 'list-item' } ].as { |arg, opts| link_to(arg, opts) }
+    [:donkey, { :class => 'list-item' }].as { |arg, opts| link_to(arg, opts) }
 
-==== Object#is_included_in?
+==== Object#is_included_in? (deprecated by ActiveSupport's newest Object#in?)
 
     User.find(1).class.is_included_in?(User, Article, Authentication)
 		
@@ -93,8 +93,12 @@ which, with the help of #args_and_opts (and the help of of #method_missing for e
   def find(*arguments)
     an_id, opts = arguments.args_with_shift_and_opts_with_merge!(:user_id => self.article.user_id, :found_at => Time.now)
   end
+  
+==== Note
 
-Basically the format of the method call is arg(ument)?s(_with_[ARGMETHOD])?_and_opt(ion)?s(_with_[OPTSMETHOD])?!, where the ARGMETHOD is the name of the method which applies to the "args" part of the array, and OPTSMETHOD would be the name of the method which is called on the "opts" part of the array.
+The method_missing hook to allow the above functionality (explained in more detail below) is only available for Ruby 1.9+ because it depends, to an extent, on the availability of the method Method#parameters.
+
+Basically the format of the method call is arg(ument)?s(\_with\_[ARGMETHOD])?\_and_opt(ion)?s(\_with\_[OPTSMETHOD])?!, where the ARGMETHOD is the name of the method which applies to the "args" part of the array, and OPTSMETHOD would be the name of the method which is called on the "opts" part of the array.
 
 Additionally, arguments can be passed to #args_and_opts, but as of now, in the event that both ARGMETHOD and OPTSMETHOD are defined, the arguments will be passed to the OPTSMETHOD only. Some effort was made to utilize arity to determine where the arguments should be passed to, but to my recollection this is still an unfinished aspect.
 

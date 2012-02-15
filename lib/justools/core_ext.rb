@@ -1,0 +1,6 @@
+# require 'justools/core_ext/class'
+require 'justools/core_ext/object'
+require 'justools/core_ext/enumerable'
+require 'justools/core_ext/set'
+require 'justools/core_ext/array'
+require 'justools/core_ext/hash'

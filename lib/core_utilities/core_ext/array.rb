@@ -1,6 +1,0 @@
-require 'core_utilities/core_ext/array/base'
-require 'core_utilities/core_ext/array/flatten_splat'
-require 'core_utilities/core_ext/array/filters'
-require 'core_utilities/core_ext/array/extract_options'
-require 'core_utilities/core_ext/array/merge_options'
-require 'core_utilities/core_ext/array/args_and_opts'

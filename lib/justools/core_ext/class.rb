@@ -1,14 +1,18 @@
+# Not enabling until fixed.
 require 'active_support/core_ext/class/attribute'
 require 'active_support/core_ext/module/aliasing'
 
 class Class
-  # Purpose is to be able to define a default value for a class_attribute when one isn't initially set.
-  def class_attribute_with_default(*attrs) # Actually, this IS being used currently by gems in lib/
+  # Purpose is to be able to define a default value for a class_attribute when
+  # one isn't initially set.
+  def class_attribute_with_default(*attrs)
     hash = attrs.last.is_a?(Hash) ? attrs.pop : {}
     my_default = hash.delete(:default)
     instance_writer = hash.blank? || hash[:instance_writer]
 
-    attrs.each do |name| # By the way, FIXME: i think this should be broken because if i want to use a string as a default, that will not be reflected.
+    attrs.each do |name|
+      # By the way, FIXME: i think this should be broken because if i want to
+      # use a string as a default, that will not be reflected.
       class_eval <<-RUBY, __FILE__, __LINE__ + 1
         def self.#{name}() #{my_default || 'nil'} end
         def self.#{name}?() !!#{name} end
