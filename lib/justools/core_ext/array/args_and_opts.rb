@@ -1,6 +1,10 @@
 require 'justools/core_ext/array/merge_options'
 
 class Array
+  def rotate
+    self[0..-2].unshift(self[-1])
+  end
+  
   def arguments_and_options(update_hash = {})
     merge_options(update_hash).args_and_opts!
   end
