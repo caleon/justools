@@ -29,7 +29,7 @@ class Object
     self && yield(self)
   end
   
-  unless Object.method_defined?(:in?)
+  # unless Object.method_defined?(:in?)
     # Copy of Object#in? from Rails 3.2.1 which also allows list.
     #
     # === Parameters
@@ -47,7 +47,7 @@ class Object
         end
       end
     end
-  end
+  # end
   # def is_included_in?(*others) #d deprecated
   #   others.flatten_splat.include?(self)
   # end

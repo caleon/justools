@@ -1,4 +1,9 @@
+== 1.1.8
+
+* Defining Object#in? regardless of its pre-existence.
+
 == 1.1.7
+
 * Ruby < 1.9 does not have Array#rotate.
 
 == 1.1.6
