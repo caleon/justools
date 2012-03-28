@@ -1,5 +1,9 @@
 == 1.1.8
 
+* Invalid regexp for args_and_opts
+
+== 1.1.8
+
 * Defining Object#in? regardless of its pre-existence.
 
 == 1.1.7
