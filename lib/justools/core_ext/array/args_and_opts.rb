@@ -27,7 +27,7 @@ class Array
     
       [$1, $2].zip(args_and_opts).map do |m, obj|
         next if m.respond_to?(:empty?) ? empty? : !m
-        obj.send(m.to_sym, *args.constrained_by_method(obj.method(m.to_sym)))
+        obj.send(m.to_sym, *args.send(:constrained_by_method, obj.method(m.to_sym)))
       end
     end
     
