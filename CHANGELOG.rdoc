@@ -1,3 +1,7 @@
+== 1.1.10
+
+* Ruby 1.9 doesn't need this patch mucking with the internal definition of rotate.
+
 == 1.1.8
 
 * Invalid regexp for args_and_opts

@@ -1,8 +1,10 @@
 require 'justools/core_ext/array/merge_options'
 
 class Array
-  def rotate
-    self[0..-2].unshift(self[-1])
+  unless Array.instance_methods.include?(:rotate) # Was only patch for 1.8
+    def rotate
+      self[0..-2].unshift(self[-1])
+    end
   end
   
   def arguments_and_options(update_hash = {})
