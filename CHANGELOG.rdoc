@@ -1,3 +1,8 @@
+== 1.2.0
+
+* Re-architecting for Jeweler compatibility
+* Removing test/ directory in favor of skeletal RSpec setup (coming soon)
+
 == 1.1.10
 
 * Ruby 1.9 doesn't need this patch mucking with the internal definition of rotate.
