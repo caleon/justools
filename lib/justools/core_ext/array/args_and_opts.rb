@@ -1,6 +1,6 @@
 require 'justools/core_ext/array/merge_options'
 
-module Juscribe
+module Justools
   ARGS_AND_OPTS_REGEXP = /^#{%w(arg(?:ument)?s opt(?:ion)?s).
                              zip(Array.new(2, "(?:_with_(\\w+))?")).
                              map(&:join) * '_and_'}!?$/
