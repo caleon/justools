@@ -1,4 +1,4 @@
-require 'justools/core_ext'
+# require 'justools/core_ext'
 
 module Justools
 end
