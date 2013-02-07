@@ -1,3 +1,8 @@
+== 1.3.0
+
+* Removing lots of methods no longer needed after ActiveSupport and Ruby 1.9+
+* Reorganizing directory structure
+
 == 1.2.2
 
 * Moving constant for regular expression to array/args_and_opts to allow each extension to be indepedently required
