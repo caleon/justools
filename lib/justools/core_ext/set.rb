@@ -1,3 +1,5 @@
+require 'set'
+
 class Set
   def not_subset?(set)
     set.is_a?(Set) or raise ArgumentError, "value must be a set"

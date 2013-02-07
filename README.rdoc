@@ -10,23 +10,9 @@ Ruby-level extensions, utilities, convenience methods that I've found I'm consta
 
 === Object
 
-==== Object#as
+==== Object#aka
 
-    [:donkey, { :class => 'list-item' }].as { |arg, opts| link_to(arg, opts) }
-
-==== Object#is_included_in? (deprecated by ActiveSupport's newest Object#in?)
-
-    User.find(1).class.is_included_in?(User, Article, Authentication)
-		
-or alternatively:
-
-    @user.is_one_kind_of?(User, Article, Authentication)
-		
-which has the same effect as:
-
-    @user.is_one_kind_of?([User, Article, Authentication])
-
-by virtue of:
+    [:donkey, { :class => 'list-item' }].aka { |arg, opts| link_to(arg, opts) }
 
 === Array
 
@@ -132,4 +118,5 @@ http://github.com/caleon/justools/contributors
 
 == License
 
-MIT License. Copyright 2012 caleon.
+MIT License. Copyright 2013 caleon.
+

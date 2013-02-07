@@ -1,4 +1,3 @@
-# require 'justools/core_ext/class'
 require 'justools/core_ext/object'
 require 'justools/core_ext/enumerable'
 require 'justools/core_ext/set'
