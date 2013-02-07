@@ -1,3 +1,7 @@
+== 1.2.2
+
+* Moving constant for regular expression to array/args_and_opts to allow each extension to be indepedently required
+
 == 1.2.0
 
 * Re-architecting for Jeweler compatibility

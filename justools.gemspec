@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "justools"
-  s.version = "1.2.1"
+  s.version = "1.2.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["caleon"]
-  s.date = "2012-10-25"
+  s.date = "2013-02-07"
   s.description = "Core extensions with lots of handy methods"
   s.email = "caleon@gmail.com"
   s.extra_rdoc_files = [

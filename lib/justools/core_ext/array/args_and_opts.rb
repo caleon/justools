@@ -1,5 +1,11 @@
 require 'justools/core_ext/array/merge_options'
 
+module Juscribe
+  ARGS_AND_OPTS_REGEXP = /^#{%w(arg(?:ument)?s opt(?:ion)?s).
+                             zip(Array.new(2, "(?:_with_(\\w+))?")).
+                             map(&:join) * '_and_'}!?$/
+end
+
 class Array
   unless Array.instance_methods.include?(:rotate) # Was only patch for 1.8
     def rotate
